@@ -1,0 +1,5 @@
+
+# remount / and /system ro
+bb="$(which busybox)"
+$bb mount -o remount,ro /system
+$bb mount -o remount,ro /

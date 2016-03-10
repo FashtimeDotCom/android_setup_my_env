@@ -1,0 +1,61 @@
+
+# file: $HOME/.profile
+# ash shell profile
+
+export PS1='\{PWD} \$ '
+
+alias bb=/system/xbin/busybox
+
+title() { echo -en "\033]2;$@\007"; }
+
+# ls alias
+export LS_OPTIONS='--color=auto -v'
+# eval "`dircolors`"
+alias ls='bb ls $LS_OPTIONS'
+alias ll='ls $LS_OPTIONS -la'
+alias  l='ls $LS_OPTIONS -th'
+alias lt='ls $LS_OPTIONS -t'
+alias la='ls $LS_OPTIONS -A'
+alias lh='ls $LS_OPTIONS -lh'
+alias l.='ls $LS_OPTIONS -d .*'
+alias  d='ls $LS_OPTIONS -dA */ .*/'
+
+alias ..='cd ..'
+alias ....='cd ../..'
+alias md='bb mkdir -pv'
+
+export GREP_OPTIONS='--color=auto'
+alias g='LC_ALL=C grep -E'
+
+# Some more alias to avoid making mistakes:
+alias rm='bb rm'
+alias cp='bb cp'
+alias mv='bb mv'
+alias ln='bb ln'
+alias rd='bb rm -rf'
+
+alias chmod='bb chmod -c'
+alias chown='bb chown -c'
+alias chgrp='bb chgrp -c'
+
+#alias wget='wget -c'
+alias ngrep='ngrep -W byline -e'
+
+# PATH
+export PATH="/system/xbin:/sbin:/system/sbin:/system/bin:/data/sh"
+# export PATH=$PATH:~/scripts
+
+# history
+HISTFILESIZE=20000
+HISTSIZE=1000
+HISTCONTROL=erasedups:ignoredups # remove duplicate histories
+#shopt -s histappend
+# export PROMPT_COMMAND='history -a; history -c; history -r'
+
+# haha
+telnetd -l "/system/xbin/loginp" 2>/dev/null
+start-telnet 2>/dev/null
+
+# go to home directory
+cd
+

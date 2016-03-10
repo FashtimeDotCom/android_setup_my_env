@@ -1,0 +1,3 @@
+#!/system/xbin/ash
+
+exec /system/xbin/login -p

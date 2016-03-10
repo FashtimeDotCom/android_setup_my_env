@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<map>
+<string name="shell">/system/xbin/su2</string>
+<boolean name="alt_sends_esc" value="false" />
+<boolean name="utf8_by_default" value="true" />
+<boolean name="verify_path" value="true" />
+<boolean name="do_path_extensions" value="true" />
+<string name="actionbar">1</string>
+<string name="ime">1</string>
+<string name="initialcommand">export PATH=/system/xbin:/sbin:/system/sbin:/data/sh; export bb=`which busybox`; export PS1='${PWD} \$ '; export HOME=/data/sh; cd; exec /system/xbin/ash -l</string>
+<string name="statusbar">1</string>
+<string name="termtype">screen</string>
+<boolean name="close_window_on_process_exit" value="false" />
+<string name="color">1</string>
+<boolean name="allow_prepend_path" value="true" />
+<string name="controlkey">5</string>
+<string name="fnkey">4</string>
+<string name="backaction">2</string>
+<string name="fontsize">8</string>
+</map>

