@@ -3,6 +3,7 @@
 # require: dd chmod chown rm
 
 # TODO: ensure()
+# TODO: require root
 # TODO: /etc/install-recovery.sh
 
 self="$0"

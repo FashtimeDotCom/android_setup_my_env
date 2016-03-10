@@ -45,7 +45,6 @@ install_busybox()
 	target_bb=/system/xbin/busybox
 	# install -o USER -g GROUP -m MODE SOURCE... DEST
 	$bb install -o 0 -g 0 -m 4755 $bb "$target_bb"
-	$bb chmod u+s "target_bb"
 	rm $bb				# delete old busybox
 	bb="$target_bb"		# new busybox
 	cd /system/xbin/
@@ -87,8 +86,13 @@ set_term_env()
 	
 	echo 'setup users and password'
 	$bb tar -xf etc.tar.xz -C /etc/
+	echo 'starting telnetd'
 	$bb telnetd -l /system/xbin/loginp
+	"/system/xbin/start-telnet"
 	echo '		Done'
+	echo '============================='
+	echo 'Run `i` cmd to start a shell.'
+	echo '============================='
 }
 
 main()
